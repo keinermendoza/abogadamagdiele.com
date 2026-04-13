@@ -1,0 +1,24 @@
+---
+import type { CollectionEntry } from 'astro:content';
+interface Props {
+  step: CollectionEntry<'clientRoadSteps'>;
+}
+
+const {step} = Astro.props;
+const {data} = step;
+
+---
+
+<article>
+    <h3>{data.title}</h3>
+    <div>
+    {data.description.map(text => 
+        <p>{text}</p>
+    )}
+    </div>
+</article>
+
+<style>
+    
+
+</style>

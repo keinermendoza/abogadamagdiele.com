@@ -1,0 +1,22 @@
+---
+import type { CollectionEntry } from 'astro:content';
+interface Props {
+  service: CollectionEntry<'keyServices'>;
+}
+
+const {service} = Astro.props;
+const {data} = service;
+---
+
+<article id={data.slug}>
+    <div class="icon-container">
+        <slot></slot>
+    </div>
+    <h3>{data.title}</h3>
+    <p>{data.description}</p>
+</article>
+
+<style>
+
+
+</style>
