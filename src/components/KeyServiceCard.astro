@@ -1,20 +1,24 @@
 ---
-import type { CollectionEntry } from 'astro:content';
+import { render, type CollectionEntry } from 'astro:content';
 interface Props {
   service: CollectionEntry<'keyServices'>;
 }
 
 const {service} = Astro.props;
-const {data} = service;
+const {Content} = await render(service);
 ---
 
-<article id={data.slug}>
+<article id={service.id}>
     <div class="icon-container">
         <slot></slot>
     </div>
-    <h3>{data.title}</h3>
-    <p>{data.description}</p>
+    <h3>{service.data.title}</h3>
+    <p>{service.data.description}</p>
 </article>
+
+<div>
+  <Content />
+</div>
 
 <style>
 

@@ -1,15 +1,15 @@
 - id: 1
   title: "Revisa la información de tu caso"
-  description: 
+  text: 
     - "Consulta los requisitos del servicio que te interesa. Allí encontrarás la información básica sobre documentos y condiciones más comunes."
     - "¿Tienes dudas? Escríbeme por WhatsApp. Si no estás seguro de qué aplica en tu situación, puedes enviarme un mensaje. Con gusto te orientaré sobre los requisitos generales y te indicaré si tu caso necesita una revisión más detallada."
 
 - id: 2
   title: "Agenda tu consulta"
-  description: 
+  text: 
   - "Reserva una consulta para el análisis de tus documentos y recaudos. En esta etapa evalúo tu caso con detalle, identifico la condición real de la situación y te brindo indicaciones específicas y claras sobre los pasos a seguir."
 
 - id: 3
   title: "Te acompaño en todo el proceso"
-  description: 
+  text: 
   - "Cada caso es único, pero en todos garantizo profesionalismo, organización y comunicación constante. Desde este momento no estás solo: camino contigo en cada paso hasta buscar la mejor solución posible."

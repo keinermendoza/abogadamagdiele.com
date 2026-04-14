@@ -2,26 +2,25 @@
 import { defineCollection } from 'astro:content';
 
 // 2. Import loader(s)
-import { file } from 'astro/loaders';
+import { file, glob } from 'astro/loaders';
 
 // 3. Import Zod
 import { z } from 'astro/zod';
 
 // 4. Define a `loader` and `schema` for each collection
 const keyServices = defineCollection({
-  loader: file('./src/content/keyServices.yaml'),
+  loader: glob({ pattern: "**/*.md", base: "./src/content/keyServices" }),
   schema: z.object({
-    slug: z.string(),
     title: z.string(),
     description: z.string(),
   }),
 });
 
 const generalServices = defineCollection({
-  loader: file('./src/content/generalServices.yaml'),
+  loader: glob({ pattern: "**/*.md", base: "./src/content/generalServices" }),
   schema: z.object({
-    slug: z.string(),
     title: z.string(),
+    hasDescription: z.boolean(),
   }),
 });
 
@@ -30,7 +29,7 @@ const clientSteps = defineCollection({
   schema: z.object({
     id: z.number().int(),
     title: z.string(),
-    description: z.array(z.string()),
+    text: z.array(z.string()),
   }),
 });
 

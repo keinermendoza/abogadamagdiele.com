@@ -12,8 +12,8 @@ const {data} = step;
 <article>
     <h3>{data.title}</h3>
     <div>
-    {data.description.map(text => 
-        <p>{text}</p>
+    {data.text.map(paragraph => 
+        <p>{paragraph}</p>
     )}
     </div>
 </article>
