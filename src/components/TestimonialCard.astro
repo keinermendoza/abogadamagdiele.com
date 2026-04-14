@@ -1,0 +1,23 @@
+---
+import type { CollectionEntry } from 'astro:content';
+interface Props {
+  testimonial: CollectionEntry<'testimonials'>;
+}
+
+const {testimonial} = Astro.props;
+const {data} = testimonial;
+---
+
+<article id={data.slug}>
+    <div class="icon-container">
+        <slot></slot>
+    </div>
+    <h3>{data.name}</h3>
+    <p>{data.category}</p>
+    <p>{data.message}</p>
+</article>
+
+<style>
+
+
+</style>

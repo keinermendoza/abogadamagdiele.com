@@ -1,0 +1,84 @@
+---
+import { getCollection } from "astro:content";
+
+const FAQs = await getCollection('FAQs');
+---
+
+<div class="accordion">
+    {FAQs.map(({data}) => (
+    <div class="accordion-item">
+        <button class="accordion-header">{data.question}</button>
+        <div class="accordion-content">
+            {data.text.map(paragraph => <p>{paragraph}</p>)}
+        </div>
+    </div>  
+    )
+)}
+</div>
+
+<script is:inline>
+    document.querySelectorAll('.accordion-header').forEach(button => {
+    button.addEventListener('click', () => {
+    const accordionItem = button.parentElement;
+
+    // Opcional: Cerrar otros ítems abiertos (estilo "single open")
+    document.querySelectorAll('.accordion-item').forEach(item => {
+      if (item !== accordionItem) {
+        item.classList.remove('active');
+      }
+    });
+
+    // Alternar la clase active en el ítem clickeado
+    accordionItem.classList.toggle('active');
+  });
+});
+</script>
+
+<style>
+
+    .accordion {
+  max-width: 500px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.accordion-header {
+  width: 100%;
+  padding: 15px;
+  background: #f4f4f4;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background 0.3s ease;
+  outline: none;
+}
+
+.accordion-header:hover {
+  background: #e9e9e9;
+}
+
+/* El contenedor del contenido oculto */
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  background: white;
+}
+
+.accordion-content p {
+  padding: 15px;
+  margin: 0;
+}
+
+/* Clase activa que aplicaremos con JS */
+.accordion-item.active .accordion-content {
+  max-height: 200px; /* Un valor mayor al contenido esperado */
+}
+
+.accordion-item.active .accordion-header {
+  background: #e0e0e0;
+}
+</style>

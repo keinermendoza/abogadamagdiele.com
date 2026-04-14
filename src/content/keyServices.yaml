@@ -1,11 +1,11 @@
-- slug: titulos-supletorios
-  title: Títulos Supletorios
-  description: ¿Tienes problemas con los documentos de tu inmueble? ¿El antiguo propietario nunca realizó la documentación correspondiente? Analizo tu situación y te acompaño en el proceso para regularizar la propiedad. 
+- slug: "titulos-supletorios"
+  title: "Títulos Supletorios"
+  description: "¿Tienes problemas con los documentos de tu inmueble? ¿El antiguo propietario nunca realizó la documentación correspondiente? Analizo tu situación y te acompaño en el proceso para regularizar la propiedad." 
 
-- slug: divorcio-por-desafecto
-  title: Divorcio por desafecto
-  description: ¿Necesitas poner fin legal a una relación matrimonial de manera rápida? Te asesoro en el proceso de divorcio por desafecto, orientándote con claridad sobre los requisitos y los pasos necesarios para hacerlo de forma ordenada y respetuosa.
+- slug: "divorcio-por-desafecto"
+  title: "Divorcio por desafecto"
+  description: "¿Necesitas poner fin legal a una relación matrimonial de manera rápida? Te asesoro en el proceso de divorcio por desafecto, orientándote con claridad sobre los requisitos y los pasos necesarios para hacerlo de forma ordenada y respetuosa."
 
-- slug: compra-venta
-  title: Compra - Venta
-  description: ¿Quieres formalizar la compra de un vehículo? ¿Estás vendiendo una casa o adquiriendo un inmueble? Aunque parezca sencillo, existen distintos tipos de documentos y requisitos según cada caso. Te explico cuál corresponde a tu situación y qué necesitas para realizar una compra-venta segura.
+- slug: "compra-venta"
+  title: "Compra - Venta"
+  description: "¿Quieres formalizar la compra de un vehículo? ¿Estás vendiendo una casa o adquiriendo un inmueble? Aunque parezca sencillo, existen distintos tipos de documentos y requisitos según cada caso. Te explico cuál corresponde a tu situación y qué necesitas para realizar una compra-venta segura."

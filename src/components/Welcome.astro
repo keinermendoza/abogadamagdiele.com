@@ -3,10 +3,13 @@ import { getCollection } from 'astro:content';
 import KeyServiceCard from './KeyServiceCard.astro';
 import GeneralServiceCard from './GeneralServiceCard.astro';
 import ClientStepCard from './ClientStepCard.astro';
+import TestimonialCard from './TestimonialCard.astro';
+import FAQAcordion from './FAQAcordion.astro';
 
 const allKeyServices = await getCollection('keyServices');
 const allGeneralServices = await getCollection('generalServices');
 const clientSteps = await getCollection('clientSteps');
+const testimonials = await getCollection('testimonials');
 
 ---
 <section>
@@ -25,6 +28,13 @@ const clientSteps = await getCollection('clientSteps');
 	)}
 	<br>
 	{clientSteps.map(step => <ClientStepCard step={step} /> )}
+
+	<br>
+	{testimonials.map(testimonial => <TestimonialCard testimonial={testimonial} /> )}
+	<br>
+	<hr>
+	
+	<FAQAcordion />
 
 </section>
 

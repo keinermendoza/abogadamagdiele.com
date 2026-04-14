@@ -1,0 +1,45 @@
+- id: 1
+  question: "¿La consulta es obligatoria antes de iniciar un trámite?"
+  text: 
+  - "Sí. La consulta me permite evaluar tu caso de manera profesional, revisar documentos y determinar la mejor estrategia."
+  - "Esto garantiza que el proceso comience correctamente y evita errores posteriores."
+
+- id: 2
+  question: "¿Cuánto tiempo tarda un proceso legal?"
+  text:
+  - "Cada caso es diferente y los tiempos pueden variar según su complejidad y los entes públicos involucrados."
+  - "Muchos procedimientos dependen de la Administración Pública, Tribunales u otras Instituciones,  cuyos tiempos no siempre son inmediatos. Sin embargo, desde mi parte, me encargo de impulsar el proceso con responsabilidad y hacer seguimiento constante para evitar retrasos innecesarios."
+  - "Siempre te explicaré de forma realista los tiempos estimados antes de iniciar."
+
+- id: 3
+  question: "¿Qué pasa si mi caso no puede resolverse?"
+  text:
+  - "En la consulta inicial analizo tu situación con honestidad."
+  - "Si considero que no es viable o que existen limitaciones importantes, te lo comunicaré con claridad."
+  - "Prefiero ofrecer una orientación sincera desde el principio, antes que generar falsas expectativas."
+
+- id: 4
+  question: "¿Cómo sabré si mi caso está avanzando?"
+  text:
+  - "La comunicación es una prioridad para mí."
+  - "Durante el proceso te mantendré informado sobre cada avance relevante y cualquier novedad que surja. Además, estaré disponible para aclarar tus dudas cuando lo necesites."
+  - "Mi compromiso es que nunca te sientas desinformado o sin respuesta."
+  
+- id: 5
+  question: "¿Puedo hacer preguntas durante el proceso?"
+  text:
+  - "Por supuesto. Considero fundamental que entiendas cada paso."
+  - "Mi objetivo no es solo representarte, sino que tengas claridad sobre lo que está ocurriendo en tu caso."
+
+- id: 6
+  question: "¿Qué diferencia tu servicio de otros?"
+  text:
+  - "Mi enfoque combina experiencia técnica con trato humano."
+  - "Trabajo con organización, comunicación constante y compromiso real con cada cliente."
+  - "No se trata solo de gestionar documentos, sino de acompañarte con seriedad y responsabilidad en todo el proceso."
+
+- id: 7
+  question: "¿Qué ocurre si el retraso depende de una institución pública?"
+  text:
+  - "Cuando el avance depende de Tribunales u organismos oficiales, los tiempos pueden extenderse más allá de lo previsto."
+  - "En esos casos, realizo seguimiento y mantengo informado al cliente sobre el estado del trámite, explicando cualquier situación que esté fuera de mi control."

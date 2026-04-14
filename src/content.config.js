@@ -34,6 +34,25 @@ const clientSteps = defineCollection({
   }),
 });
 
+const testimonials = defineCollection({
+  loader: file('./src/content/testimonials.yaml'),
+  schema: z.object({
+    slug: z.string(),
+    name: z.string(),
+    message: z.string(),
+    category: z.string(),
+  }),
+});
+
+const FAQs = defineCollection({
+  loader: file('./src/content/FAQs.yaml'),
+  schema: z.object({
+    id: z.number().int(),
+    question: z.string(),
+    text: z.array(z.string()),
+  }),
+});
+
 
 // 5. Export a single `collections` object to register your collection(s)
-export const collections = { keyServices, generalServices, clientSteps };
+export const collections = { keyServices, generalServices, clientSteps, testimonials, FAQs };
