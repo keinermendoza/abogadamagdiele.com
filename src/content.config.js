@@ -9,7 +9,7 @@ import { z } from 'astro/zod';
 
 // 4. Define a `loader` and `schema` for each collection
 const keyServices = defineCollection({
-  loader: file('./src/content/key-services.yaml'),
+  loader: file('./src/content/keyServices.yaml'),
   schema: z.object({
     slug: z.string(),
     title: z.string(),
@@ -18,15 +18,15 @@ const keyServices = defineCollection({
 });
 
 const generalServices = defineCollection({
-  loader: file('./src/content/general-services.yaml'),
+  loader: file('./src/content/generalServices.yaml'),
   schema: z.object({
     slug: z.string(),
     title: z.string(),
   }),
 });
 
-const clientRoadSteps = defineCollection({
-  loader: file('./src/content/client-road-steps.yaml'),
+const clientSteps = defineCollection({
+  loader: file('./src/content/clientSteps.yaml'),
   schema: z.object({
     id: z.number().int(),
     title: z.string(),
@@ -36,4 +36,4 @@ const clientRoadSteps = defineCollection({
 
 
 // 5. Export a single `collections` object to register your collection(s)
-export const collections = { keyServices, generalServices, clientRoadSteps };
+export const collections = { keyServices, generalServices, clientSteps };

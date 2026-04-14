@@ -2,11 +2,11 @@
 import { getCollection } from 'astro:content';
 import KeyServiceCard from './KeyServiceCard.astro';
 import GeneralServiceCard from './GeneralServiceCard.astro';
-import ClientRoadCard from './ClientRoadCard.astro';
+import ClientStepCard from './ClientStepCard.astro';
 
 const allKeyServices = await getCollection('keyServices');
 const allGeneralServices = await getCollection('generalServices');
-const clientRoad = await getCollection('clientRoadSteps');
+const clientSteps = await getCollection('clientSteps');
 
 ---
 <section>
@@ -24,7 +24,7 @@ const clientRoad = await getCollection('clientRoadSteps');
 
 	)}
 	<br>
-	{clientRoad.map(step => <ClientRoadCard step={step} /> )}
+	{clientSteps.map(step => <ClientStepCard step={step} /> )}
 
 </section>
 
