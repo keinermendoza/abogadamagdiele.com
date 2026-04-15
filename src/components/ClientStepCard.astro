@@ -5,14 +5,12 @@ interface Props {
 }
 
 const {step} = Astro.props;
-const {data} = step;
-
 ---
 
 <article>
-    <h3>{data.title}</h3>
+    <h3>{step.data.title}</h3>
     <div>
-    {data.text.map(paragraph => 
+    {step.data.text.map(paragraph => 
         <p>{paragraph}</p>
     )}
     </div>

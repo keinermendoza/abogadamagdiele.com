@@ -13,6 +13,7 @@ const keyServices = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string(),
+    picture: z.string(),
   }),
 });
 
@@ -38,6 +39,7 @@ const testimonials = defineCollection({
   schema: z.object({
     slug: z.string(),
     name: z.string(),
+    picture: z.string(),
     message: z.string(),
     category: z.string(),
   }),

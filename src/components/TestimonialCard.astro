@@ -1,20 +1,24 @@
 ---
 import type { CollectionEntry } from 'astro:content';
+import type { ImageMetadata } from 'astro';
+import { Image } from 'astro:assets';
+
 interface Props {
   testimonial: CollectionEntry<'testimonials'>;
 }
 
 const {testimonial} = Astro.props;
-const {data} = testimonial;
 ---
 
-<article id={data.slug}>
-    <div class="icon-container">
-        <slot></slot>
-    </div>
-    <h3>{data.name}</h3>
-    <p>{data.category}</p>
-    <p>{data.message}</p>
+<article id={testimonial.data.slug}>
+    <h3>{testimonial.data.name}</h3>
+    <p>{testimonial.data.category}</p>
+    <p>{testimonial.data.message}</p>
+    <Image 
+      src={testimonial.data.picture}
+      width={24}
+      height={24}
+      alt={"imagen de perfil de " + testimonial.data.name} />
 </article>
 
 <style>
