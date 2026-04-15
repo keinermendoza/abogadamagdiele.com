@@ -7,7 +7,7 @@ export default defineConfig({
        {
             provider: fontProviders.google(),
             name: "Comfortaa",
-            cssVariable: "--font-comfortaa",
+            cssVariable: "--ff-body",
             weights: [400, 500, 800],
             styles: ["normal"]
     
@@ -15,7 +15,7 @@ export default defineConfig({
         {
             provider: fontProviders.google(),
             name: "Plus Jakarta Sans",
-            cssVariable: "--font-jakarta",
+            cssVariable: "--ff-title",
             weights: [800],
             styles: ["normal"]
     

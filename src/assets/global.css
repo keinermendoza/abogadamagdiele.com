@@ -1,0 +1,18 @@
+:root {
+    --clr-white: #FFFFFF;
+    --clr-soft-gray: #E9EEFC;
+    --clr-gray: #B3C5FF;
+    --clr-black: #00123D;
+    --clr-primary: #002366;
+    --clr-gold: #D4AF37;
+
+    --fs-xs: 0.875rem;
+    --fs-sm: 1rem;
+    --fs-md: 1.125rem;
+    --fs-lg: 1.25rem;
+    --fs-xl: 2rem;
+    --fs-xxl: 2.5rem;
+
+    --fw-body: 400;
+    --fw-title: 800;
+}
