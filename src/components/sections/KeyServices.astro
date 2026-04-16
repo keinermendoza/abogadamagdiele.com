@@ -1,0 +1,41 @@
+---
+import { getCollection } from 'astro:content';
+import KeyServiceCard from "@components/KeyServiceCard.astro"
+
+const keyServices = await getCollection('keyServices');
+---
+
+<section class="section-background">
+    <div class="general-section key-service-section">
+        <h2 class="general-title">Vocación por la Justicia</h2>
+        
+        <div class="gallery">
+            {keyServices.map(
+                service => <KeyServiceCard service={service}/>
+            )}
+        </div>
+    </div>
+</section>
+
+<style>
+    .section-background {
+        background-color: var(--clr-soft-gray);
+    }
+    .key-service-section {
+        display: grid;
+        gap: 3rem;
+    }   
+    .gallery {
+        display: grid;
+    } 
+
+    @media (min-width:68rem) {
+        .key-service-section {
+            gap: 4rem;
+        }   
+        .gallery {
+            grid-template-columns: repeat(3, 1fr);        
+        }
+    }
+
+</style>
