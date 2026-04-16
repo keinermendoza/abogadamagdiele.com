@@ -36,28 +36,23 @@ body {
     line-height: 1.5;
 }
 
-.section {
+.general-section {
     padding: 4rem 1.5rem;
     max-width: 95rem;
     margin-inline: auto;
 }
 
-.title {
+.general-title {
     font-size: var(--fs-xl);
     text-align: center;
     font-weight: var(--fw-title);
 }
 
 @media (min-width:40rem) {
-    .title {
+    .general-title {
         font-size: var(--fs-xxl);
     }   
-    .section {
+    .general-section {
         padding: 5.625rem 5rem;
     }
-}
-
-.grid-center {
-    display: grid;
-    place-content: center;
 }

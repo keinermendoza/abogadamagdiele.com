@@ -1,11 +1,11 @@
 ---
 import { Image } from 'astro:assets';
-import ProfileImage from "../../assets/profile-desktop.png"
+import ProfileImage from "../../assets/profile.png"
 ---
 
 
-<section class="about-section">
-    <div class="section about">
+<section class="section-background">
+    <div class="general-section about">
         <div class="image-container">
             <Image src={ProfileImage}
                 class="image"
@@ -20,7 +20,7 @@ import ProfileImage from "../../assets/profile-desktop.png"
         </div>
 
         <div class="content">
-            <h2 class="title title--left">Vocación por la Justicia</h2>
+            <h2 class="general-title title--left">Vocación por la Justicia</h2>
             <div class="text">
                 <p>Soy abogada por profesión y por verdadera vocación. Desde hace más de 20 años me dedico al Derecho Civil y Mercantil, acompañando a personas que necesitan orientación, respaldo y tranquilidad en momentos importantes de sus vidas.</p>
                 <p>A lo largo de mi experiencia he ayudado a muchas personas a resolver sus procedimientos legales de forma clara y ordenada, siempre explicando cada paso para que se sientan seguros y bien informados.</p>
@@ -32,13 +32,12 @@ import ProfileImage from "../../assets/profile-desktop.png"
             </div>
         </div>
     </div>
-
 </section>
 
 <style lang="scss" >
     $mobilePaddingBottom: 3rem;
 
-    .about-section {
+    .section-background {
         background-color: var(--clr-black);
         color: var(--clr-white);
     }
