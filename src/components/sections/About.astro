@@ -1,7 +1,141 @@
 ---
-import Section from "./Section.astro"
+import { Image } from 'astro:assets';
+import ProfileImage from "../../assets/profile-desktop.png"
 ---
 
-<Section>
-    <h2>Hola</h2>
-</Section>
+
+<section class="about-section">
+    <div class="section about">
+        <div class="image-container">
+            <Image src={ProfileImage}
+                class="image"
+                widths={[200, 350, 500]}
+                alt="Retrato profesional de la abogada Magdiele"
+                sizes="(max-width: 600px) 200px, (max-width: 1024px) 350px, 500px" 
+            />
+            <div class="stat stat--floating">
+                <p class="number">+20</p>
+                <p class="text">Años de Experiencia</p>
+            </div>
+        </div>
+
+        <div class="content">
+            <h2 class="title title--left">Vocación por la Justicia</h2>
+            <div class="text">
+                <p>Soy abogada por profesión y por verdadera vocación. Desde hace más de 20 años me dedico al Derecho Civil y Mercantil, acompañando a personas que necesitan orientación, respaldo y tranquilidad en momentos importantes de sus vidas.</p>
+                <p>A lo largo de mi experiencia he ayudado a muchas personas a resolver sus procedimientos legales de forma clara y ordenada, siempre explicando cada paso para que se sientan seguros y bien informados.</p>
+                <p>Creo firmemente que ejercer el derecho no es solo conocer la ley, sino también escuchar, comprender y tratar a cada cliente con respeto y amabilidad. mi compromiso es convertirme en ese apoyo legal al que puedas volver cada vez que lo necesites.</p>   
+            </div>
+            <div class="stat stat--normal">
+                <p class="number">+20</p>
+                <p class="text">Años de Experiencia</p>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<style lang="scss" >
+    $mobilePaddingBottom: 3rem;
+
+    .about-section {
+        background-color: var(--clr-black);
+        color: var(--clr-white);
+    }
+    
+    .about {
+        display: flex;
+        flex-flow: column wrap;
+        .image-container {
+            display: grid;
+            place-content: center;
+            position: relative;
+            padding-bottom: $mobilePaddingBottom;
+
+            .image {
+                height: auto;
+                width: clamp(200px, 50%, 400px);
+                aspect-ratio: 1;
+                margin-inline: auto;
+            }
+        }
+
+        .stat {
+            width: fit-content;
+           
+            .number {
+                font-weight: 500;
+                font-size: var(--fs-xxl);
+                margin-bottom: -0.5rem;
+            }
+            .text {
+                font-size: var(--fs-xs)
+            }
+        &--normal {
+            display: none;
+            text-align: center;
+        }
+        &--floating {
+            display: block;
+            text-align: left;
+            position:absolute;
+            bottom: calc($mobilePaddingBottom - 2rem);
+            right: calc(50%);
+            transform: translateX(calc(50% + 5rem));
+            .text {
+                margin-left: -2rem;
+            }
+        }
+        }
+        
+        .content { 
+            display: grid;
+            gap: 3rem;
+            .text p:not(:last-of-type) {
+                margin-bottom: 1.25rem;
+            }
+        }
+    }    
+
+    @media (min-width:68rem) {
+        .about {
+            flex-direction: row;
+            
+            .image-container {
+                width: 50%;
+                padding-bottom: 0;
+
+                .image {
+                    width: 400px;
+                    margin-right: auto;
+                }
+            }
+
+            .stat {               
+                    .number {
+                        font-size: 4rem;
+                    }
+                    .text {
+                        margin: 0;
+                        font-size: var(--fs-sm)
+                    }
+                &--normal {
+                    display: block;
+                }
+                &--floating {
+                    display: none;
+                }
+            }
+            
+            .content {
+                width: 50%;
+                gap: 2rem;
+                .title--left {
+                    text-align: left;
+                }
+               
+            }
+        }
+    }
+
+</style>
