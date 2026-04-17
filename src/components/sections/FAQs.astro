@@ -1,0 +1,24 @@
+---
+import FAQAcordion from '@components/FAQAcordion.astro';
+---
+
+<section class="section-background">
+    <div class="g-section">
+        <h2 class="g-title title">Nuestra Ruta de Trabajo</h2>
+        
+        <FAQAcordion /> 
+    </div>
+</section>
+
+<style lang="scss">
+    .section-background {
+        background-color: var(--clr-black);
+        color: var(--clr-white);
+    }
+    .title {
+        margin-bottom: 3rem;
+        @media (min-width:68rem) {
+            margin-bottom: 4rem;
+        }
+    }
+</style>
