@@ -1,0 +1,33 @@
+---
+import { getCollection } from 'astro:content';
+import TestimonialCard from '@components/TestimonialCard.astro';
+const testimonials = await getCollection('testimonials');
+---
+
+<section class="section-background">
+    <div class="g-section testimonials-section">
+        <h2 class="g-title">Reseñas de Clientes</h2>
+        
+        <div class="gallery">
+            {testimonials.map(
+                testimonial => <TestimonialCard testimonial={testimonial}/>
+            )}
+        </div>
+    </div>
+</section>
+
+<style lang="scss">
+    .testimonials-section {
+        display: grid;
+        gap: 3rem;
+        @media (min-width:68rem) {gap: 4rem;}
+    }
+    .gallery {
+        display: grid;
+        gap: 1.25rem;
+
+        @media (min-width:52rem) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+</style>

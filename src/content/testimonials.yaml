@@ -8,13 +8,13 @@
   name: "Jeison Ramirez"
   picture: "/testimonials/jeison.png"
   message: "Me siento satisfecho con los trabajos realizados por la doctora Magdiele, es una persona muy honesta y amable. La he recomendado a familiares y amigos y todos han quedado contentos con su labor."
-  category: "Registro de Compañía Anónima"
+  category: "REGISTRO DE COMPAÑÍA ANONIMA"
 
 - slug: "libia-aleman-de-vergara"
   name: "Libia Alemán de Vergara"
   picture: "/testimonials/libia.png"
   message: "Quiero darle las gracias y agradecimientos a la doctora Magdiele por su excelente labor, ayuda y asesoramiento con la declaración de herederos universales, es una excelente persona y abogada"
-  category: "Declaración de Herederos Universales"
+  category: "DECLARACIÓN DE HEREDEROS UNIVERSALES"
 
 - slug: "lidia-lara"
   name: "Lidia Lara"
