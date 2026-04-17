@@ -33,6 +33,8 @@ body {
     font-family: var(--ff-body);
     font-weight: var(--fw-body);
     font-size: var(--fs-sm);
+    color: var(--clr-black);
+    background-color: var(--clr-soft-gray);
     line-height: 1.5;
 }
 
@@ -48,6 +50,22 @@ body {
     font-weight: var(--fw-title);
 }
 
+.general-btn-primary-color {
+    font-weight: var(--fw-title);
+    background-color: var(--clr-primary);
+    color: var(--clr-white);
+    text-decoration: none;
+    border: var(--clr-primary) 2px solid;
+}
+
+.general-btn-secondary-color {
+    font-weight: var(--fw-title);
+    background-color: transparent;
+    color: var(--clr-black);
+    border: var(--clr-black) 2px solid;
+    text-decoration: none;
+}
+
 @media (min-width:40rem) {
     .general-title {
         font-size: var(--fs-xxl);
@@ -56,3 +74,4 @@ body {
         padding: 5.625rem 5rem;
     }
 }
+

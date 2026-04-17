@@ -17,25 +17,21 @@ const keyServices = await getCollection('keyServices');
     </div>
 </section>
 
-<style>
+<style lang="scss">
     .section-background {
         background-color: var(--clr-soft-gray);
     }
     .key-service-section {
         display: grid;
         gap: 3rem;
+
+        @media (min-width:68rem) {gap: 4rem;}
     }   
     .gallery {
         display: grid;
-    } 
+        gap: 2rem;
 
-    @media (min-width:68rem) {
-        .key-service-section {
-            gap: 4rem;
-        }   
-        .gallery {
-            grid-template-columns: repeat(3, 1fr);        
-        }
+        @media (min-width:52rem) {grid-template-columns: repeat(2, 1fr);}
+        @media (min-width:92.5rem) {grid-template-columns: repeat(3, 1fr);}
     }
-
 </style>
