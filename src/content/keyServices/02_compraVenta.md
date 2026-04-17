@@ -1,7 +1,7 @@
 ---
 title: "Compra-Venta"
 description: "¿Tienes problemas con los documentos de tu inmueble? ¿El antiguo propietario nunca realizó la documentación correspondiente? Analizo tu situación y te acompaño en el proceso para regularizar la propiedad."
-picture: "/serviceIcons/poem.svg"
+icon: "/serviceIcons/poem.svg"
 ---
 
 ## Compra-Venta de Vehículos

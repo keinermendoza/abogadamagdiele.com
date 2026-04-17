@@ -1,7 +1,7 @@
 ---
 title: "Título Supletorio"
 description: "¿Tienes problemas con los documentos de tu inmueble? ¿El antiguo propietario nunca realizó la documentación correspondiente? Analizo tu situación y te acompaño en el proceso para regularizar la propiedad."
-picture: "/serviceIcons/building.svg"
+icon: "/serviceIcons/building.svg"
 ---
 
 El Título Supletorio es un documento legal, emitido por un Tribunal de Municipio, que certifica la

@@ -1,0 +1,54 @@
+---
+import { getCollection } from 'astro:content';
+import ClientStepCard from '@components/ClientStepCard.astro';
+
+const clientSteps = await getCollection('clientSteps');
+---
+
+<section class="section-background">
+    <div class="g-section client-steps-section">
+        <div class="header">
+            <h2 class="g-title">Nuestra Ruta de Trabajo</h2>
+            <p>Quiero que sepas exactamente qué esperar. Mi proceso es claro, organizado y está pensado para acompañarte en cada etapa.</p>
+        </div>
+        
+        <div class="gallery">
+            {clientSteps.map(
+                step => <ClientStepCard step={step}/>
+            )}
+        </div>
+    </div>
+</section>
+
+<style lang="scss">
+    .section-background {
+        background-color: var(--clr-black);
+        color: var(--clr-white);
+    }
+    .client-steps-section {
+        display: grid;
+        gap: 4rem;
+        @media (min-width:68rem) {gap: 4.5rem;}
+
+        .header {
+            text-align: center;
+            max-width: 43rem;
+            margin-inline: auto;
+            p {
+                margin-top: 2rem;
+            }
+        }
+    }   
+    .gallery {
+        display: grid;
+        gap: 4.5rem;
+
+        @media (min-width:52rem) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @media (min-width:92.5rem) {
+            gap: 2rem;
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+</style>

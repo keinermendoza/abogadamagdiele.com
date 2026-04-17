@@ -13,7 +13,7 @@ const keyServices = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string(),
-    picture: z.string(),
+    icon: z.string(),
   }),
 });
 
@@ -31,6 +31,7 @@ const clientSteps = defineCollection({
     id: z.number().int(),
     title: z.string(),
     text: z.array(z.string()),
+    icon: z.string(),
   }),
 });
 

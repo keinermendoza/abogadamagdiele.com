@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import type { CollectionEntry } from 'astro:content';
 interface Props {
   step: CollectionEntry<'clientSteps'>;
@@ -7,16 +8,59 @@ interface Props {
 const {step} = Astro.props;
 ---
 
-<article>
-    <h3>{step.data.title}</h3>
-    <div>
+<article class="client-step-card">
+  <span class="floating-number">0{step.data.id}</span>
+  <header>
+      <Image
+        class="icon" 
+        src={step.data.icon} 
+        alt=""
+        width={20}
+        height={20}
+        />
+      <h3 class="title">{step.data.title}</h3>
+    </header>
+    <div class="content">
     {step.data.text.map(paragraph => 
         <p>{paragraph}</p>
     )}
     </div>
 </article>
 
-<style>
+<style lang="scss">
+  .client-step-card {
+    position:relative;
+    .floating-number {
+        position: absolute;
+        top: -2.5rem;
+        left: -0.5rem;
+        font-size: 3rem;
+        font-weight: var(--fw-title);
+        opacity: 0.15;
+        z-index: 0;
+    }
+
+    header {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+      margin-bottom: 1rem;    
+      z-index: 1;
+
+      .title {
+        font-weight: var(--fw-title);
+        font-family: var(--ff-title);
+        font-size: var(--fs-lg);
+      }
+  
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      gap: 1.125rem;      
+    }
+  }
     
 
 </style>
