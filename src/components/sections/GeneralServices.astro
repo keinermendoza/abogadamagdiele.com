@@ -1,0 +1,40 @@
+---
+import { getCollection } from 'astro:content';
+import GeneralServiceCard from '@components/GeneralServiceCard.astro';
+
+const generalServices = await getCollection('generalServices');
+---
+
+<section class="section-background">
+    <div class="g-section general-service-section">
+        <h2 class="g-title">Otros Servicios</h2>
+        
+        <div class="gallery">
+            {generalServices.map(
+                service => <GeneralServiceCard service={service}/>
+            )}
+        </div>
+    </div>
+</section>
+
+<style lang="scss">
+    .section-background {
+        background-color: var(--clr-soft-gray);
+    }
+    .general-service-section {
+        display: grid;
+        gap: 3rem;
+        @media (min-width:68rem) {gap: 4rem;}
+    }   
+    .gallery {
+        display: grid;
+        gap: 1.25rem;
+
+        @media (min-width:52rem) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @media (min-width:92.5rem) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+</style>

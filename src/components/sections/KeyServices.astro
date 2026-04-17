@@ -6,8 +6,8 @@ const keyServices = await getCollection('keyServices');
 ---
 
 <section class="section-background">
-    <div class="general-section key-service-section">
-        <h2 class="general-title">Vocación por la Justicia</h2>
+    <div class="g-section key-service-section">
+        <h2 class="g-title">Servicios Destacados</h2>
         
         <div class="gallery">
             {keyServices.map(
@@ -24,13 +24,11 @@ const keyServices = await getCollection('keyServices');
     .key-service-section {
         display: grid;
         gap: 3rem;
-
         @media (min-width:68rem) {gap: 4rem;}
     }   
     .gallery {
         display: grid;
         gap: 2rem;
-
         @media (min-width:52rem) {grid-template-columns: repeat(2, 1fr);}
         @media (min-width:92.5rem) {grid-template-columns: repeat(3, 1fr);}
     }
