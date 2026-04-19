@@ -60,25 +60,68 @@ body {
     }
 }
 
-/* https://getcssscan.com/css-box-shadow-examples 75 airbnb */
-.g-box-shadow {
-    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
-}
 
 /* padding and border radius are define by components */
-.g-btn-primary-color {
+
+/* common button style */
+.g-btn-primary-color,
+.g-btn-secondary-color {
     font-weight: var(--fw-title);
+    isolation: isolate;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    text-decoration: none;
+    display: flex;
+}
+
+/* color difference */
+.g-btn-primary-color {
     background-color: var(--clr-primary);
     color: var(--clr-white);
-    text-decoration: none;
     border: var(--clr-primary) 2px solid;
 }
 .g-btn-secondary-color {
-    font-weight: var(--fw-title);
-    background-color: transparent;
+    background-color: var(--clr-white);
     color: var(--clr-black);
     border: var(--clr-black) 2px solid;
-    text-decoration: none;
+}
+
+/* common hover style */
+/* background color change in diagonal move */
+.g-btn-primary-color:before,
+.g-btn-secondary-color:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 100%;
+  width: 30rem;  
+  height: 30rem; 
+  transition: .5s;  
+  z-index: -1;
+  border-radius: 50%;
+}
+
+/* hover color diference */
+.g-btn-primary-color:before {
+  background-color: var(--clr-gold); 
+}
+.g-btn-secondary-color:before {
+    background-color: var(--clr-gray);
+}
+
+/* common hover/focus trigger   */
+.g-btn-primary-color:hover:before,
+.g-btn-secondary-color:hover:before,
+.g-btn-primary-color:focus:before,
+.g-btn-secondary-color:focus:before {
+    right: -100%;
+    top: -100%;
+}
+
+.g-btn-primary-color:hover,
+.g-btn-primary-color:focus {
+    color: var(--clr-black);
 }
 
 /* width and padding are define by components */
@@ -92,4 +135,9 @@ body {
 .g-circle-container .g-icon {
     width: 100%;
     height: 100%;
+}
+
+/* https://getcssscan.com/css-box-shadow-examples 75 airbnb */
+.g-box-shadow {
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
 }
