@@ -73,6 +73,7 @@ body {
     z-index: 1;
     text-decoration: none;
     display: flex;
+    transition-duration: 0.5s;
 }
 
 /* color difference */
@@ -95,8 +96,8 @@ body {
   position: absolute;
   top: 0;
   right: 100%;
-  width: 30rem;  
-  height: 30rem; 
+  width: 500%;  
+  height: 500%; 
   transition: .5s;  
   z-index: -1;
   border-radius: 50%;
@@ -121,6 +122,7 @@ body {
 
 .g-btn-primary-color:hover,
 .g-btn-primary-color:focus {
+    transition-duration: 0.6s;
     color: var(--clr-black);
 }
 
