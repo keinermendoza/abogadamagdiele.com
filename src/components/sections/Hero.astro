@@ -1,0 +1,131 @@
+---
+import { Image } from 'astro:assets';
+import Justice from "@assets/justice.png";
+---
+
+
+<section class="section-background">
+    <div class="g-section hero">
+    
+        <div class="content">
+            <div class="text">
+                <h1 class="title">Abogada Magdiele</h1>
+                <p class="subtitle">TU TRANQUILIDAD LEGAL, CON RESPALDO Y CERCANÍA.</p>
+                <p>Más de 20 años acompañando a personas en procesos civiles y mercantiles con claridad, compromiso y trato humano.</p>
+            </div>
+        
+            <div class="buttons-container">
+                <a class="g-btn-secondary-color btn" href="#">Ver Requisitos</a>
+                <a class="g-btn-primary-color btn" href="#">Agendar Cita</a>      
+            </div>
+        </div>
+    
+        <Image src={Justice}
+        class="bg-image"
+        widths={[700, 1000]}
+        alt="Estatua de la Justicia con los ojos vendados, sosteniendo una balanza en alto y una espada hacia abajo, con la mirada orientada al horizonte."
+        sizes="(max-width: 600px) 700px, 1000px" 
+    />
+    </div>
+
+    
+</section>
+
+<style lang="scss" >
+
+// layout
+.hero {
+    position: relative;
+    min-height: 590px;
+    display: flex;
+    align-items: center;
+
+    @media (min-width:68rem) {
+        min-height: 700px;
+    }
+
+    .content {
+        position: relative;
+        z-index: 1;
+    }
+
+    .bg-image {
+        opacity: 0.4;
+        height: 60%;
+        position: absolute;
+        z-index: 0;
+        width: fit-content;
+        object-fit: contain;
+        inset: auto 0 0 auto; // bottom-right
+
+        @media (min-width:52rem) {
+            opacity: 0.6;
+            height: 70%;
+        }
+
+        @media (min-width:82rem) {
+            height: 100%;
+            opacity: 1;
+        }
+    }
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    max-width: 40rem;
+    gap: 3rem;
+    @media (min-width:68rem) {
+        max-width: 42rem;
+        font-size: var(--fs-md);
+    }
+
+    .title {
+        font-size: 3rem;
+        font-family: var(--ff-title);
+        font-weight: var(--fw-title);
+        margin-bottom: 0.75rem;
+        line-height: 1.2;
+       
+        @media (min-width:68rem) {
+            font-size: 4.5rem;
+            margin-bottom: 1.375rem;
+        }
+    }
+    .subtitle {
+        font-size: var(--fs-md);
+        letter-spacing: 5%;
+        margin-bottom: 1.5rem;
+
+        @media (min-width:68rem) {
+            font-size: var(--fs-lg);
+        }
+    }
+    .buttons-container {
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+        gap: 1.125rem;
+
+        @media (min-width:52rem) {
+            flex-direction: row;
+            gap: 1rem;
+        }
+    }
+}
+
+.btn {
+    display: flex;
+    font-size: 1rem;
+    padding: 14px 22px;
+    border-radius: 2em;
+    @media (min-width:68rem) {
+    font-size: 1.125rem;
+    padding: 18px 32px;
+  }
+}
+   
+
+</style>
