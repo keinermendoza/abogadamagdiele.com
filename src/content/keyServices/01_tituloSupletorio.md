@@ -1,5 +1,6 @@
 ---
 title: "Título Supletorio"
+slug: "titulo-supletorio"
 description: "¿Tienes problemas con los documentos de tu inmueble? ¿El antiguo propietario nunca realizó la documentación correspondiente? Analizo tu situación y te acompaño en el proceso para regularizar la propiedad."
 icon: "/serviceIcons/building.svg"
 ---
@@ -9,7 +10,7 @@ posesión y propiedad de las bienhechurías (construcciones) realizadas sobre un
 no existe un título de propiedad ordinario. No otorga propiedad sobre el terreno en sí, solo sobre
 lo construido, y se utiliza para regularizar la situación jurídica de inmuebles.
 
-*¿Qué necesitas?*
+## *¿Qué necesitas?*
 
 - Constancia de titularidad (carta catastral) y plano de ubicación en terrenos propiedad de terceros
 - Constancia de Residencia

@@ -1,5 +1,6 @@
 ---
 title: "Legalizaciones y trámites en línea"
+slug: "legalizaciones-y-tramites-en-linea"
 hasDescription: true
 ---
 

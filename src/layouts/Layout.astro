@@ -1,5 +1,6 @@
 ---
 import { Font } from "astro:assets";
+import { ClientRouter } from 'astro:transitions';
 import "./src/assets/global.css";
 ---
 <!doctype html>
@@ -12,6 +13,7 @@ import "./src/assets/global.css";
 		<meta name="generator" content={Astro.generator} />
 		<Font cssVariable="--ff-body" />
 		<Font cssVariable="--ff-title" />
+		<ClientRouter />	
 		<title>Astro Basics</title>
 	</head>
 	<body>

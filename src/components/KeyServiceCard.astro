@@ -20,10 +20,10 @@ const {service} = Astro.props;
           height={25}
           />
     </div>
-    <h3 class="title">{service.data.title}</h3>
+    <h3 transition:name={service.data.slug} class="title">{service.data.title}</h3>
     <p>{service.data.description}</p>
     <footer>
-      <a class="g-btn-secondary-color btn" href="#">Ver Requisitos</a>
+      <a class="g-btn-secondary-color btn" href={'/servicios/' + service.data.slug}>Ver Requisitos</a>
       <a class="g-btn-primary-color btn" href="#">Agendar Cita</a>      
     </footer>
   </article>

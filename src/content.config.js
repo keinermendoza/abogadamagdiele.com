@@ -11,6 +11,7 @@ import { z } from 'astro/zod';
 const keyServices = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "./src/content/keyServices" }),
   schema: z.object({
+    slug: z.string(),
     title: z.string(),
     description: z.string(),
     icon: z.string(),
@@ -21,6 +22,7 @@ const generalServices = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "./src/content/generalServices" }),
   schema: z.object({
     title: z.string(),
+    slug: z.string(),
     hasDescription: z.boolean(),
   }),
 });

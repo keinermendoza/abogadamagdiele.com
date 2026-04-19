@@ -1,5 +1,6 @@
 ---
 title: "Divorcio Por Desafecto"
+slug: "divorcio-por-desafecto-o-perdida-del-amor"
 description: "¿Necesitas poner fin legal a una relación matrimonial de manera rápida? Te asesoro en el proceso de divorcio por desafecto, orientándote con claridad sobre los requisitos y los pasos necesarios para hacerlo de forma ordenada y respetuosa."
 icon: "/serviceIcons/family.svg"
 ---

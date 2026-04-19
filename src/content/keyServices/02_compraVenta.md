@@ -1,12 +1,13 @@
 ---
 title: "Compra-Venta"
+slug: "compra-venta"
 description: "¿Tienes problemas con los documentos de tu inmueble? ¿El antiguo propietario nunca realizó la documentación correspondiente? Analizo tu situación y te acompaño en el proceso para regularizar la propiedad."
 icon: "/serviceIcons/poem.svg"
 ---
 
 ## Compra-Venta de Vehículos
 
-*¿Qué necesitas?*
+**¿Qué necesitas?**
 
 - Certificado de Registro de Vehículo
 - Comprobante de pago (Cheque o transferencia bancaria)
@@ -18,7 +19,7 @@ icon: "/serviceIcons/poem.svg"
 
 ## Compra-Venta de Bienhechuría (construcciones)
 
-*¿Qué necesitas?*
+**¿Qué necesitas?**
 
 - Declaración Jurada de Origen y Destino Lícito de Fondos
 - Cédula de identidad laminada y vigente
@@ -31,7 +32,7 @@ icon: "/serviceIcons/poem.svg"
 
 ## Compra-Venta de Inmuebles
 
-*¿Qué necesitas?*
+**¿Qué necesitas?**
 
 - Cédula de identidad laminada y Vigente
 - Ficha Catastral actualizada y solvencias municipales

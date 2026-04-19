@@ -1,5 +1,6 @@
 ---
 title: "Justificativo Para Matrimonio (Carta de Soltería)"
+slug: "justificativo-para-matrimonio-carta-de-solteria"
 hasDescription: true
 ---
 *¿Qué necesitas?*

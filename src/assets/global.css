@@ -27,7 +27,9 @@
 
 html,
 body {
-    
+    scroll-behavior: smooth;
+    /* navbar height */
+    scroll-margin-top: 70px;
     width: 100%;
     height: 100%;
     font-family: var(--ff-body);

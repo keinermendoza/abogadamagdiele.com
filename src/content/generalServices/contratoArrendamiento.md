@@ -1,4 +1,5 @@
 ---
-title: "Contrato de Arrendamiento" 
+title: "Contrato de Arrendamiento"
+slug: "contrato-de-arrendamiento" 
 hasDescription: false
 ---

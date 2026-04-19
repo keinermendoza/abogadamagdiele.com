@@ -1,5 +1,6 @@
 ---
-title: Poderes de Administración y Disposición
+title: "Poderes de Administración y Disposición"
+slug: "poderes-de-administracion-y-disposicion"
 hasDescription: true
 ---
 *¿Qué necesitas?*

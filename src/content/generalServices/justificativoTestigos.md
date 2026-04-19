@@ -1,4 +1,5 @@
 ---
-title: "Justificativo de Testigos" 
+title: "Justificativo de Testigos"
+slug: "justificativo-de-testigos" 
 hasDescription: false
 ---

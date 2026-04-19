@@ -1,0 +1,99 @@
+---
+import { getCollection, render } from 'astro:content';
+
+import Layout from '@layouts/Layout.astro';
+export async function getStaticPaths() {
+  const keyServices = await getCollection('keyServices');
+  const generalServices = await getCollection('generalServices');
+
+  const allServices = [...keyServices, ...generalServices];
+ 
+  return allServices.map(service => ({
+    params: { servicio: service.data.slug },
+    props: { service },
+  }));
+}
+
+const { service } = Astro.props;
+const { Content } = await render(service);
+---
+
+<Layout>
+    <section class="markdown-section-content-wrapper">
+        <div class="g-section">
+            <a href="/#servicios" class="back">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+                </svg>
+                <span>Volver</span>
+            </a>
+
+            <h1 transition:name={service.data.slug} class="g-title title">{service.data.title}</h1>
+            <Content />
+        </div>
+    </section>
+
+</Layout>  
+
+
+<style is:global lang="scss">
+.markdown-section-content-wrapper {
+    background-color: var(--clr-white);
+
+    .back {
+        color: var(--clr-primary);
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 1.5rem;
+        cursor: pointer;
+        transition: transform 0.3s ease-out;
+        width: fit-content;
+        display: flex;
+        margin-bottom: 2rem;
+
+        svg {
+            color: var(--clr-primary);
+            width: 1.5rem;
+        }
+
+        &:hover,
+        &:focus {
+            transform: scale(1.1);
+        }
+    }
+
+    .title {
+        margin-bottom: 3rem;
+    }
+
+    
+    h2 {
+        font-size: var(--fs-lg);
+        font-weight: var(--fw-title);
+        margin-bottom: 1.25rem;
+        @media (min-width: 68rem) {
+            font-size: var(--fs-xl);
+        }
+    }
+    
+    h3 {
+        font-size: var(--fs-md);
+        font-weight: var(--fw-title);
+        margin-bottom: 1.125rem;
+
+        @media (min-width: 68rem) {
+            font-size: var(--fs-lg);
+        }
+    }
+
+    
+    p, ul {
+        margin-bottom: 1rem;
+    }
+    li {
+        margin-inline-start: 1.25rem;
+        margin-bottom: 0.45rem;
+    }
+}
+
+</style>

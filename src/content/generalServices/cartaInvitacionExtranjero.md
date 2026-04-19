@@ -1,5 +1,6 @@
 ---
 title: "Carta de Invitación a Extranjero"
+slug: "carta-de-invitacion-a-extranjero"
 hasDescription: true
 ---
 

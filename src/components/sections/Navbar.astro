@@ -1,6 +1,6 @@
 <nav>
   <div class="wrapper">
-    <div class="logo"><a href="#">Abogada Magdiele</a></div>
+    <div class="logo"><a href="/#inicio">Abogada Magdiele</a></div>
 
     <input type="radio" name="slider" id="menu-btn">
     <input type="radio" name="slider" id="close-btn">
@@ -11,13 +11,13 @@
         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
       </svg>
       </label>
-      <li><a class="nav-anchor" href="#">Sobre Mí</a></li>
-      <li><a class="nav-anchor" href="#">Servicios</a></li>
+      <li><a class="nav-anchor" href="#sobre-mi">Sobre Mí</a></li>
+      <li><a class="nav-anchor" href="#servicios">Servicios</a></li>
 
-      <li><a class="nav-anchor" href="#">Empezando</a></li>
-      <li><a class="nav-anchor" href="#">Reseñas</a></li>
-      <li><a class="nav-anchor" href="#">Dirección</a></li>
-      <li><a class="nav-anchor" href="#">Respuestas</a></li>
+      <li><a class="nav-anchor" href="#empezando">Empezando</a></li>
+      <li><a class="nav-anchor" href="#resenas">Reseñas</a></li>
+      <li><a class="nav-anchor" href="#direccion">Dirección</a></li>
+      <li><a class="nav-anchor" href="#respuestas">Respuestas</a></li>
       <li class="primary-btn-container">
         <a class="g-btn-primary-color btn-primary" href="#">Agendar cita</a>
       </li>
@@ -30,6 +30,12 @@
   </div>
 </nav>
 
+<script is:inline>
+  const closeRadioBtn = document.getElementById('close-btn');
+  document.querySelectorAll('.nav-anchor').forEach(anchor => {
+    anchor.onclick = () => closeRadioBtn.checked = true;
+  });
+</script>
 
 <style lang="scss">
 

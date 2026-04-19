@@ -1,4 +1,5 @@
 ---
-title: "Actas de Asambleas" 
+title: "Actas de Asambleas"
+slug: "actas-de-asambleas" 
 hasDescription: false
 ---
