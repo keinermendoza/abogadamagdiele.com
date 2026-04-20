@@ -33,12 +33,7 @@ import Whatsapp from "@components/Whatsapp.astro"
   </div>
 </nav>
 
-<script is:inline>
-  const closeRadioBtn = document.getElementById('close-btn');
-  document.querySelectorAll('.nav-anchor').forEach(anchor => {
-    anchor.onclick = () => closeRadioBtn.checked = true;
-  });
-</script>
+<script>import "../../assets/closeNavbar.js";</script>
 
 <style lang="scss">
 

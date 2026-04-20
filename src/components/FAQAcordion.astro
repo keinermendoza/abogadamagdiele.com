@@ -24,32 +24,14 @@ const FAQs = await getCollection('FAQs');
 )}
 </div>
 
-<script is:inline>
-    document.querySelectorAll('.accordion-header').forEach(button => {
-    button.addEventListener('click', () => {
-    const accordionItem = button.parentElement;
-
-    // Opcional: Cerrar otros ítems abiertos (estilo "single open")
-    // document.querySelectorAll('.accordion-item').forEach(item => {
-    //   if (item !== accordionItem) {
-    //     item.classList.remove('active');
-    //   }
-    // });
-
-    // Alternar la clase active en el ítem clickeado
-    accordionItem.classList.toggle('active');
-    if (!accordionItem.classList.contains('init')) {
-      accordionItem.classList.add('init');
-    }
-  });
-});
-</script>
+<script>import "../assets/faqAcordion";</script>
 
 <style lang="scss">
+  $animationTime:0.3s;
+  $contentParagraphPadding: 1rem 1rem 0 1rem;
 
-.accordion {
+  .accordion {
   --rounded: 24px;
-  --content-paragraph-padding: 1rem 1rem 0 1rem;
 
   overflow: hidden;
   display: flex;
@@ -104,13 +86,16 @@ const FAQs = await getCollection('FAQs');
 
 @keyframes padding-out {
   0% {
-    padding: var(--content-paragraph-padding);
+    padding: $contentParagraphPadding;
+    opacity: 1;
   }
-  90% {
-    padding: var(--content-paragraph-padding);
+  20% {
+    padding: $contentParagraphPadding;
+    opacity: 0;
   }
   100% {
     padding: 0;
+    opacity: 0;
   }
 }
 }
@@ -121,18 +106,18 @@ const FAQs = await getCollection('FAQs');
   &.active {
     .accordion-header {
       background: var(--clr-gray);
-      animation: rounded-open 0.3s ease-out forwards;
+      animation: rounded-open $animationTime ease-out forwards;
       
       .icon-container {
         transform: rotate(180deg);
       }
     }
     .accordion-content {
-      animation: accordion-open 0.3s ease-out forwards;
+      animation: accordion-open $animationTime ease-out forwards;
       /* heigher than expected */
       max-height: 200px; 
       p {
-        padding: var(--content-paragraph-padding);
+        padding: $contentParagraphPadding;
 
         &:last-of-type {
           padding-bottom: 1rem;
@@ -145,14 +130,14 @@ const FAQs = await getCollection('FAQs');
   // closing animations
   &.init:not(.active) {
     .accordion-header {
-      animation: rounded-close 0.3s ease-in forwards;
+      animation: rounded-close $animationTime ease-in forwards;
 
     }
     .accordion-content {
-      animation: accordion-close 0.3s ease-in forwards;
+      animation: accordion-close $animationTime ease-in forwards;
 
       p {
-        animation: padding-out 0.3s forwards;
+        animation: padding-out 0.5s ease-out forwards;
       }
     }
 
@@ -191,10 +176,7 @@ const FAQs = await getCollection('FAQs');
     color: var(--clr-black);
     background: var(--clr-white);
     border-radius: 0 0 var(--rounded) var(--rounded);
-
-    p {
-      padding: 0px;
-    }
+    
   }
 }
 
@@ -209,7 +191,7 @@ const FAQs = await getCollection('FAQs');
     color: var(--clr-white);
     flex-shrink: 0;
     // transition for basic animation. see this element in opening animations
-    transition: transform 0.2s ease-out;
+    transition: transform $animationTime ease-out;
     .icon {
       width: 100%;
       aspect-ratio: 1;
