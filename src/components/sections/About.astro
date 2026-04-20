@@ -1,17 +1,11 @@
----
-import { Image } from 'astro:assets';
-import ProfileImage from "@assets/profile.png"
----
-
 
 <section id="sobre-mi" class="section-background">
     <div class="g-section about">
         <div class="image-container">
-            <Image src={ProfileImage}
+            <img src="/profile.png"
                 class="image"
-                widths={[200, 350, 500]}
+                width="700"
                 alt="Retrato profesional de la abogada Magdiele"
-                sizes="(max-width: 600px) 200px, (max-width: 1024px) 350px, 500px" 
             />
             <div class="stat stat--floating">
                 <p class="number">+20</p>

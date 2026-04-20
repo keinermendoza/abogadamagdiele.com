@@ -1,6 +1,4 @@
 ---
-import { Image } from 'astro:assets';
-import Justice from "@assets/justice.png";
 import Whatsapp from '@components/Whatsapp.astro';
 ---
 
@@ -21,11 +19,10 @@ import Whatsapp from '@components/Whatsapp.astro';
             </div>
         </div>
     
-        <Image src={Justice}
+        <img src="/justice.png"
         class="bg-image"
-        widths={[700, 1000]}
+        width="1000"
         alt="Estatua de la Justicia con los ojos vendados, sosteniendo una balanza en alto y una espada hacia abajo, con la mirada orientada al horizonte."
-        sizes="(max-width: 600px) 700px, 1000px" 
     />
     </div>
 
