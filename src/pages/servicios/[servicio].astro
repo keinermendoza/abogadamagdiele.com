@@ -1,6 +1,7 @@
 ---
 import { getCollection, render } from 'astro:content';
-
+import WhatsappCircle from '@components/WhatsappCircle.astro';
+import Whatsapp from '@components/Whatsapp.astro';
 import Layout from '@layouts/Layout.astro';
 export async function getStaticPaths() {
   const keyServices = await getCollection('keyServices');
@@ -21,15 +22,17 @@ const { Content } = await render(service);
 <Layout>
     <section class="markdown-section-content-wrapper">
         <div class="g-section">
+            
             <a href="/#servicios" class="back">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
                 </svg>
                 <span>Volver</span>
             </a>
-
             <h1 transition:name={service.data.slug} class="g-title title">{service.data.title}</h1>
+            <Whatsapp isNotPrimary class='underline-link' >Agendar cita con Abogada Magdiele</Whatsapp>
             <Content />
+            <WhatsappCircle />  
         </div>
     </section>
 
@@ -39,7 +42,17 @@ const { Content } = await render(service);
 <style is:global lang="scss">
 .markdown-section-content-wrapper {
     background-color: var(--clr-white);
+    min-height: 100vh;
 
+    .underline-link {
+        display: block;
+        font-size: var(--fs-md);
+        font-style: italic;
+        text-decoration: underline;
+        text-underline-offset: 0.25em;
+        color: var(--clr-primary);
+        margin-bottom: 3rem;
+    }
     .back {
         color: var(--clr-primary);
         align-items: center;

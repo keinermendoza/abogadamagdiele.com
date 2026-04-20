@@ -1,0 +1,16 @@
+---
+import {encodeMessage} from "@assets/whatsapp"
+
+interface Props {
+  message?: string,
+  class: string,
+  isNotPrimary?: boolean
+}
+
+const defaultMessage = "Hola, vi su sitio web y me gustaría contratar uno de sus servicios. ¿Podemos hablar?."
+const {message = defaultMessage, class:className, isNotPrimary, ...rest} = Astro.props;
+const WhatsappLink = encodeMessage(message);
+const extraClass = isNotPrimary ? '' : 'g-btn-primary-color';
+---
+
+<a target="_blank" aria-label="Escríbeme por whatsapp" href={WhatsappLink} class:list={[extraClass, className]} {...rest}><slot/></a>

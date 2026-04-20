@@ -1,8 +1,7 @@
 ---
 import {type CollectionEntry } from 'astro:content';
-// import type { ImageMetadata } from 'astro';
 import { Image } from 'astro:assets';
-
+import Whatsapp from '@components/Whatsapp.astro';
 interface Props {
   service: CollectionEntry<'keyServices'>;
 }
@@ -24,7 +23,7 @@ const {service} = Astro.props;
     <p>{service.data.description}</p>
     <footer>
       <a class="g-btn-secondary-color btn" href={'/servicios/' + service.data.slug}>Ver Requisitos</a>
-      <a class="g-btn-primary-color btn" href="#">Agendar Cita</a>      
+      <Whatsapp class='btn' message={'Hola. Estaba viendo su sitio web. Quiero agendar una cita relacionada con el servicio de *' + service.data.title + '* . Podría darme un poco mas de informacion? ' + 'https://abogadamagdiele.com/servicios/' + service.data.slug} >Agendar Cita</Whatsapp>    
     </footer>
   </article>
 
