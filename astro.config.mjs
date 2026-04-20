@@ -1,8 +1,10 @@
 // @ts-check
 import { defineConfig, fontProviders } from 'astro/config';
 
+import cloudflare from '@astrojs/cloudflare';
 
 export default defineConfig({
+    adapter: cloudflare(),
     fonts: [
        {
             provider: fontProviders.google(),
