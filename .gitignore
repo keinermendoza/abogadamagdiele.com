@@ -24,3 +24,9 @@ pnpm-debug.log*
 .idea/
 
 notes.md
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+!.env.example
