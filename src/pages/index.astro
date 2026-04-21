@@ -10,7 +10,9 @@ import Testimonials from '@components/sections/Testimonials.astro';
 import Contact from '@components/sections/Contact.astro';
 import FAQs from '@components/sections/FAQs.astro';
 import Footer from '@components/sections/Footer.astro';
+import FixedContainer from '@components/sections/FixedContainer.astro';
 import WhatsappCircle from '@components/WhatsappCircle.astro';
+import ShareBtn from '@components/ShareBtn.astro';
 ---
 
 <Layout>
@@ -24,5 +26,8 @@ import WhatsappCircle from '@components/WhatsappCircle.astro';
 	<Contact />
 	<FAQs />
 	<Footer />	
-	<WhatsappCircle />
+	<FixedContainer>
+		<ShareBtn />
+		<WhatsappCircle />
+	</FixedContainer>	
 </Layout>

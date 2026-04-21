@@ -18,20 +18,22 @@ const whatsappLink = encodeMessage(message);
 
 <style lang="scss">
 .fixed-btn {
-  --from-border: 1rem;
-  position: fixed;
-  bottom: var(--from-border);
-  right: var(--from-border);
-  z-index: 20;
+  // --from-border: 1rem;
+  // position: fixed;
+  // bottom: var(--from-border);
+  // right: var(--from-border);
+  // z-index: 20;
   transition: transform;
+  position: relative;
   
   &:hover {
     transform: scale(1.1);
   }
+    // @media (min-width: 68rem) {
+    //         --from-border: 2rem;
+    //     }
 
-  @media (min-width: 68rem) {
-    --from-border: 2rem;
-  }
+
 }
 
 .circle-whatsapp-btn {
