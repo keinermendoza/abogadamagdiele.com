@@ -14,9 +14,15 @@
 </div>
 
 <script is:inline>
-    document.getElementById('trigger-cookie-banner').onclick = () =>{
-        document.getElementById('cookie-banner').style.display = 'flex';
+    document.addEventListener('astro:after-swap', showCookieBanner);
+    document.addEventListener('DOMContentLoaded', showCookieBanner);
+    
+    function showCookieBanner() {
+        document.getElementById('trigger-cookie-banner').onclick = () => {
+            document.getElementById('cookie-banner').style.display = 'flex';
+        }
     }
+    
 </script>
 
 <style lang="scss">

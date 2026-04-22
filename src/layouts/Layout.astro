@@ -4,9 +4,6 @@ import { ClientRouter } from 'astro:transitions';
 import "@assets/global.css";
 import CookieBanner from "@components/CookieBanner.astro";
 import FixedContainer from '@components/sections/FixedContainer.astro';
-import WhatsappCircle from '@components/WhatsappCircle.astro';
-import ShareBtn from '@components/ShareBtn.astro';
-import CookieTrigger from '@components/CookieTrigger.astro';
 ---
 <!doctype html>
 <html lang="es">
@@ -23,9 +20,6 @@ import CookieTrigger from '@components/CookieTrigger.astro';
 		<ClientRouter />	
 		<title>Abogada Magdiele</title>
 		<script is:inline>
-			function tirarTodo() {
-				console.log("estoy tirando todo");
-			}
 			window.dataLayer = window.dataLayer || [];
 			window.gtag = function gtag(){dataLayer.push(arguments);}
 
@@ -59,10 +53,6 @@ import CookieTrigger from '@components/CookieTrigger.astro';
 		<!-- End Google Tag Manager (noscript) -->
 		<slot />
 		<CookieBanner />	
-		<FixedContainer>
-			<CookieTrigger />
-			<ShareBtn />
-			<WhatsappCircle />
-		</FixedContainer>	
+		<FixedContainer />	
 	</body>
 </html>
