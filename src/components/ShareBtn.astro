@@ -10,7 +10,7 @@ const btn = document.querySelector('#shareBtn');
 // 1. Verificamos disponibilidad de la API de inmediato
 if (navigator.share) {
   // Si existe, mostramos el botón
-  btn.style.display = 'block'; 
+  btn.style.display = 'flex'; 
   
   btn.addEventListener('click', async () => {
     try {
@@ -30,34 +30,32 @@ if (navigator.share) {
 </script>
 
 <style lang="scss">
-    .btn {
-        display: flex;
-        place-content: center;
-        padding: 1rem 2rem;
-        gap: 1rem;
+.btn {
+  padding: 1rem 2rem;
+  gap: 1rem;
+  display: none;
+  align-items: center;  
 
-        cursor: pointer;
-    position: relative;
-    display: none;
-    background-color: var(--clr-primary);
-    color: var(--clr-white);
-    border: none;
-    outline: 2px solid var(--clr-white); 
-    outline-offset: -5px;
-    transition: transform;
-    font-family: var(--ff-body);
-    font-weight: var(--fw-title);
-    border-radius: 1rem;
-    font-size: 1rem;
-    @media screen and (min-width: 85rem) {
-      align-items: center;  
-      border-radius: 50%;
-        padding: 0.8rem;
+  cursor: pointer;
+  position: relative;
+  background-color: var(--clr-primary);
+  color: var(--clr-white);
+  border: none;
+  outline: 2px solid var(--clr-white); 
+  outline-offset: -5px;
+  transition: transform;
+  font-family: var(--ff-body);
+  font-weight: var(--fw-title);
+  border-radius: 1rem;
+  font-size: 1rem;
+  @media screen and (min-width: 85rem) {
+    border-radius: 50%;
+      padding: 0.8rem;
       
       span {
         display: none;
       }
-    }
+  }
 
     &:hover {
         transform: scale(1.1);
