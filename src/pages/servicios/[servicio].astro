@@ -1,6 +1,5 @@
 ---
 import { getCollection, render } from 'astro:content';
-import WhatsappCircle from '@components/WhatsappCircle.astro';
 import Whatsapp from '@components/Whatsapp.astro';
 import Layout from '@layouts/Layout.astro';
 export async function getStaticPaths() {
@@ -32,7 +31,6 @@ const { Content } = await render(service);
             <h1 transition:name={service.data.slug} class="g-title title">{service.data.title}</h1>
             <Whatsapp isNotPrimary class='underline-link' >Agendar cita con Abogada Magdiele</Whatsapp>
             <Content />
-            <WhatsappCircle />  
         </div>
     </section>
 
