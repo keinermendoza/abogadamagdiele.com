@@ -18,7 +18,9 @@ const { service } = Astro.props;
 const { Content } = await render(service);
 ---
 
-<Layout>
+<Layout
+    title={`Abogada Magdiele | ${service.data.title}`}
+    description={`Aportando soluciones en ${service.data.title}`}>
     <section class="markdown-section-content-wrapper">
         <div class="g-section">
             

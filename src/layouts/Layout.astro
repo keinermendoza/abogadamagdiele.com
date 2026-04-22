@@ -4,6 +4,22 @@ import { ClientRouter } from 'astro:transitions';
 import "@assets/global.css";
 import CookieBanner from "@components/CookieBanner.astro";
 import FixedContainer from '@components/sections/FixedContainer.astro';
+import Head from "@components/sections/Head.astro";
+
+interface Props {
+  title?: string;
+  description: string;
+  url?: string;
+  image?: string;
+}
+
+const { 
+  title = "Abogada Magdiele", 
+  description, 
+  url = Astro.url.pathname, 
+  image = "/portada-v3.jpg" 
+} = Astro.props;
+
 ---
 <!doctype html>
 <html lang="es">
@@ -15,10 +31,15 @@ import FixedContainer from '@components/sections/FixedContainer.astro';
 		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 		<link rel="manifest" href="/site.webmanifest">
+		<Head 
+			title={title}
+			description={description}
+			image={image}
+			url={url}
+		/>	
 		<Font cssVariable="--ff-body" />
 		<Font cssVariable="--ff-title" />
 		<ClientRouter />	
-		<title>Abogada Magdiele</title>
 		<script is:inline>
 			window.dataLayer = window.dataLayer || [];
 			window.gtag = function gtag(){dataLayer.push(arguments);}
