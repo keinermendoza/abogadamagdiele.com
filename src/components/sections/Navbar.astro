@@ -1,5 +1,6 @@
 ---
 import Whatsapp from "@components/Whatsapp.astro"
+import ShareBtn from "@components/ShareBtn.astro"
 ---
 <nav>
   <div class="wrapper">
@@ -24,6 +25,8 @@ import Whatsapp from "@components/Whatsapp.astro"
       <li class="primary-btn-container">
         <Whatsapp class="btn-primary">Agendar cita</Whatsapp>
       </li>
+      <li><ShareBtn /></li>
+
     </ul>
     <label for="menu-btn" class="btn menu-btn">
       <svg xmlns="http://www.w3.org/2000/svg" fill="" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
@@ -43,6 +46,7 @@ import Whatsapp from "@components/Whatsapp.astro"
   
   // sparate primary buttons from all other links
   margin-left: auto;
+  margin-right: 1rem;
 
   .btn-primary {
     line-height: 1.5;
@@ -97,6 +101,7 @@ nav {
 
 .nav-links {
   display: inline-flex;
+  align-items: center;
   flex-grow: 1;
   gap: 0.25rem;
 
