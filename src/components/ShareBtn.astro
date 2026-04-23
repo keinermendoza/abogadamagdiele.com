@@ -5,28 +5,33 @@
     <span>Compartir</span>
 </button>
 <script is:inline> 
-const btn = document.querySelector('#shareBtn');
+document.addEventListener('astro:after-swap', loadShareBtnFunctionality);
+document.addEventListener('DOMContentLoaded', loadShareBtnFunctionality);
 
-// 1. Verificamos disponibilidad de la API de inmediato
-if (navigator.share) {
-  // Si existe, mostramos el botón
-  btn.style.display = 'flex'; 
-  
-  btn.addEventListener('click', async () => {
-    try {
-      await navigator.share({
-        title: document.title,
-        text: 'Mira lo que encontré en este sitio:',
-        url: window.location.href
-      });
-    } catch (error) {
-      console.log('El usuario canceló o hubo un error:', error);
-    }
-  });
-} else {
-  // Opcional: Log para desarrollo
-  console.log('Web Share API no soportada en este navegador. El botón permanecerá oculto.');
+function loadShareBtnFunctionality() {
+  const btn = document.querySelector('#shareBtn');
+  // 1. Verificamos disponibilidad de la API de inmediato
+  if (navigator.share) {
+    // Si existe, mostramos el botón
+    btn.className.add('is-suported'); 
+    
+    btn.addEventListener('click', async () => {
+      try {
+        await navigator.share({
+          title: document.title,
+          text: 'Mira lo que encontré en este sitio:',
+          url: window.location.href
+        });
+      } catch (error) {
+        console.log('El usuario canceló o hubo un error:', error);
+      }
+    });
+  } else {
+    // Opcional: Log para desarrollo
+    console.log('Web Share API no soportada en este navegador. El botón permanecerá oculto.');
+  }
 }
+
 </script>
 
 <style lang="scss">
@@ -48,8 +53,14 @@ if (navigator.share) {
   font-weight: var(--fw-title);
   border-radius: 1rem;
   font-size: 1rem;
+  
   @media screen and (min-width: 85rem) {
-    border-radius: 50%;
+    
+    &.is-suported {
+      display: flex;
+    }
+  
+      border-radius: 50%;
       padding: 0.8rem;
       
       span {
