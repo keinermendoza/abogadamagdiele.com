@@ -1,6 +1,6 @@
 // @ts-check
 import { defineConfig, fontProviders } from 'astro/config';
-
+import sitemap from '@astrojs/sitemap';
 import cloudflare from "@astrojs/cloudflare";
 
 export default defineConfig({
@@ -24,7 +24,7 @@ export default defineConfig({
   
       },
   ],
-
+  integrations: [sitemap()],
   adapter: cloudflare(),
   output: "static",
 });
