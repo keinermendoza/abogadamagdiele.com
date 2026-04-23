@@ -24,7 +24,25 @@ const FAQs = await getCollection('FAQs');
 )}
 </div>
 
-<script>import "../assets/faqAcordion";</script>
+<script is:inline>
+document.addEventListener('astro:after-swap', activateAcordionInteractivity);
+document.addEventListener('DOMContentLoaded', activateAcordionInteractivity);
+
+function activateAcordionInteractivity() {
+  document.querySelectorAll('.accordion-header').forEach(button => {
+      button.addEventListener('click', () => {
+      const accordionItem = button.parentElement;
+
+      // Alternar la clase active en el ítem clickeado
+      accordionItem.classList.toggle('active');
+      if (!accordionItem.classList.contains('init')) {
+        accordionItem.classList.add('init');
+      }
+    });
+  });
+}
+
+</script>
 
 <style lang="scss">
   $animationTime:0.3s;
