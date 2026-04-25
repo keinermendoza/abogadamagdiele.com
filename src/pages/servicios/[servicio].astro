@@ -15,12 +15,13 @@ export async function getStaticPaths() {
 }
 
 const { service } = Astro.props;
+const title = service.data.internalTitle ?? service.data.title;
 const { Content } = await render(service);
 ---
 
 <Layout
-    title={`Abogada Magdiele | ${service.data.title}`}
-    description={`Aportando soluciones en ${service.data.title}`}>
+    title={`Abogada Magdiele | ${title}`}
+    description={`Aportando soluciones en ${title}`}>
     <section class="markdown-section-content-wrapper">
         <div class="g-section">
             
@@ -30,7 +31,7 @@ const { Content } = await render(service);
                 </svg>
                 <span>Volver</span>
             </a>
-            <h1 transition:name={service.data.slug} class="g-title title">{service.data.title}</h1>
+            <h1 transition:name={service.data.slug} class="g-title title">{title}</h1>
             <Whatsapp isNotPrimary class='underline-link' >Agendar cita con Abogada Magdiele</Whatsapp>
             <Content />
         </div>

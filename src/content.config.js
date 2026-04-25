@@ -13,6 +13,7 @@ const keyServices = defineCollection({
   schema: z.object({
     slug: z.string(),
     title: z.string(),
+    internalTitle: z.string().optional(),
     description: z.string(),
     icon: z.string(),
   }),
@@ -22,6 +23,7 @@ const generalServices = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "./src/content/generalServices" }),
   schema: z.object({
     title: z.string(),
+    internalTitle: z.string().optional(),
     slug: z.string(),
     hasDescription: z.boolean(),
   }),
