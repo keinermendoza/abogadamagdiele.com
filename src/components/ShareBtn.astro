@@ -13,7 +13,7 @@ function loadShareBtnFunctionality() {
   // 1. Verificamos disponibilidad de la API de inmediato
   if (navigator.share) {
     // Si existe, mostramos el botón
-    btn.className.add('is-suported'); 
+    btn.classList.add('is-suported'); 
     
     btn.addEventListener('click', async () => {
       try {
@@ -28,6 +28,7 @@ function loadShareBtnFunctionality() {
     });
   } else {
     // Opcional: Log para desarrollo
+    btn.style.display = 'none'; 
     console.log('Web Share API no soportada en este navegador. El botón permanecerá oculto.');
   }
 }
@@ -38,9 +39,7 @@ function loadShareBtnFunctionality() {
 .btn {
   padding: 1rem 2rem;
   gap: 1rem;
-  display: none;
   align-items: center;  
-
   cursor: pointer;
   position: relative;
   background-color: var(--clr-primary);
@@ -53,9 +52,10 @@ function loadShareBtnFunctionality() {
   font-weight: var(--fw-title);
   border-radius: 1rem;
   font-size: 1rem;
-    &.is-suported {
-      display: flex;
-    }
+  &.is-suported {
+    display: flex;
+  }
+
   @media screen and (min-width: 85rem) {
     
     &.is-suported {
