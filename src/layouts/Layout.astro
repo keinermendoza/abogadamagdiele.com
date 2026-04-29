@@ -41,22 +41,37 @@ const {
 		<Font cssVariable="--ff-body" />
 		<Font cssVariable="--ff-title" />
 		<ClientRouter />	
-		<script is:inline>
-			window.dataLayer = window.dataLayer || [];
-			window.gtag = function gtag(){dataLayer.push(arguments);}
 
-			if(localStorage.getItem('consentMode') === null){
-				gtag('consent', 'default', {
-					'ad_storage': 'denied',
-					'analytics_storage': 'denied',
-					'personalization_storage': 'denied',
-					'functionality_storage': 'denied',
-					'security_storage': 'denied',
-					'ad_user_data': 'denied',
-					'ad_personalization': 'denied',
-				});
+		<script is:inline>
+			window.myConsents_rejected = {
+				ad_storage: 'denied',
+				analytics_storage: 'denied',
+				personalization_storage: 'denied',
+				functionality_storage: 'granted',
+				security_storage: 'granted',
+				ad_user_data: 'denied',
+				ad_personalization: 'denied',
+			}
+
+			window.myConsents_granted = {
+				ad_storage: 'granted',
+				analytics_storage: 'granted',
+				personalization_storage: 'granted',
+				functionality_storage: 'granted',
+				security_storage: 'granted',
+				ad_user_data: 'granted',
+				ad_personalization: 'granted',
+			}
+			
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+
+			const consent = localStorage.getItem('cookies-accepted');
+			if (consent === 'true') {
+				gtag('consent', 'default', {...window.myConsents_granted, wait_for_update: 500});
 			} else {
-				window.gtag('consent', 'default', JSON.parse(localStorage.getItem('consentMode')));
+			// null o "false"
+				gtag('consent', 'default', {...window.myConsents_rejected, wait_for_update: 500});
 			}
 		</script>
 
