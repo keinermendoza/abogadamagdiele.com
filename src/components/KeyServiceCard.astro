@@ -22,7 +22,7 @@ const {service} = Astro.props;
     <h3 transition:name={service.data.slug} class="title">{service.data.title}</h3>
     <p>{service.data.description}</p>
     <footer>
-      <a class="g-btn-secondary-color btn" href={'/servicios/' + service.data.slug}>Ver Requisitos</a>
+      <a class="g-btn-secondary-color btn" href={'/servicios/' + service.data.slug}>Saber Más</a>
       <Whatsapp class='btn' message={'Hola. Estaba viendo su sitio web. Quiero agendar una cita relacionada con el servicio de *' + service.data.title + '* . Podría darme un poco mas de informacion? ' + 'https://abogadamagdiele.com/servicios/' + service.data.slug} >Agendar Cita</Whatsapp>    
     </footer>
   </article>

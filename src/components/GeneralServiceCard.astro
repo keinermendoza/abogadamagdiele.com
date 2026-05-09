@@ -22,7 +22,7 @@ const {service} = Astro.props;
         <footer>
         {
             service.data.hasDescription &&
-            <a href={'/servicios/' + service.data.slug} class="g-btn-secondary-color btn">Ver Requisitos</a>
+            <a href={'/servicios/' + service.data.slug} class="g-btn-secondary-color btn">Saber Más</a>
         }   
             <Whatsapp class='btn' message={'Hola. Estaba viendo su sitio web. Quiero agendar una cita relacionada con el servicio de *' + service.data.title + '* . Podría darme un poco mas de informacion?. ' + 'https://abogadamagdiele.com/servicios/' + service.data.slug} >Agendar Cita</Whatsapp>    
         </footer>
